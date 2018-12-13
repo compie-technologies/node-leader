@@ -25,10 +25,12 @@ node-leader is a Nodejs implementation of the leader election algorithm backed b
 
 ```js
 const Leader = require('node-leader');
+/**@type {RedisClient}*/
 const client = require('redis').createClient();
 
 // create new leader
 const key = 'some_key'
+/**@type {Leader}*/
 const leader = new Leader(client, {key: key});
 console.log('id: ' + leader.id);
 console.log('lock key: ' + leader.key);
@@ -40,8 +42,6 @@ The Leader constructor takes a second optional argument called 'options':
 * `options.wait` - Time between 2 tries getting elected in ms (default value is `1000`)
 
 ```js
-const client = require('redis').createClient();
-
 const options = {
     key: 'some_key',
     ttl: 20000,
