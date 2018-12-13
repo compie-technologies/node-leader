@@ -6,13 +6,13 @@ Leader Election Using Redis in Node.js.
 
 ```javascript
 // Using Node.js `require()`
-const Leader = require('node-leader');
+const Leader = require('@compie-technologies/node-leader');
 ```
 
 ## Installation
 
 ```sh
-$ npm install node-leader
+$ npm install @compie-technologies/node-leader
 ```
 > :warning: **Important!** node-leader requires JavaScript ES6 
 
@@ -24,7 +24,7 @@ After a leader election algorithm has been run, however, each node throughout th
 node-leader is a Nodejs implementation of the leader election algorithm backed by Redis.  
 
 ```js
-const Leader = require('node-leader');
+const Leader = require('@compie-technologies/node-leader');
 /**@type {RedisClient}*/
 const client = require('redis').createClient();
 
