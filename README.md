@@ -14,7 +14,7 @@ const Leader = require('node-leader');
 ```sh
 $ npm install node-leader
 ```
-> :warning: **Important!** Mongorm requires JavaScript ES6 
+> :warning: **Important!** node-leader requires JavaScript ES6 
 
 ## Overview
 
