@@ -18,10 +18,10 @@ $ npm install node-leader
 
 ## Overview
 
-In distributed computing, leader election is the process of designating a single process as the organizer of some task distributed among several computers (nodes).
-Before the task is begun, all network nodes are either unaware which node will serve as the "leader" of the task, or unable to communicate with the current coordinator.
-After a leader election algorithm has been run, however, each node throughout the network recognizes a particular, unique node as the task leader.
-node-leader is a Nodejs implementation of the leader election algorithm backed by Redis.
+In distributed computing, leader election is the process of designating a single process as the organizer of some task distributed among several computers (nodes).  
+Before the task is begun, all network nodes are either unaware which node will serve as the "leader" of the task, or unable to communicate with the current coordinator.  
+After a leader election algorithm has been run, however, each node throughout the network recognizes a particular, unique node as the task leader.  
+node-leader is a Nodejs implementation of the leader election algorithm backed by Redis.  
 
 ```js
 const Leader = require('node-leader');
