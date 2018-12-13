@@ -1,6 +1,6 @@
 {
   "name": "@compie-technologies/node-leader",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "author": "Amit Landau. <amit@compie.co.il>",
   "contributors": [],
   "description": "Leader Election Using Redis in Node.js.",
