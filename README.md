@@ -14,22 +14,23 @@ const Leader = require('node-leader');
 ```sh
 $ npm install node-leader
 ```
-> :warning: **Important!** Mongorm requires JavaScript ES6 
+> :warning: **Important!** node-leader requires JavaScript ES6 
 
 ## Overview
 
-In distributed computing, leader election is the process of designating a single process as the organizer of some task distributed among several computers (nodes).
-Before the task is begun, all network nodes are either unaware which node will serve as the "leader" of the task, or unable to communicate with the current coordinator.
-After a leader election algorithm has been run, however, each node throughout the network recognizes a particular, unique node as the task leader.
-node-leader is a Nodejs implementation of the leader election algorithm backed by Redis.
+In distributed computing, leader election is the process of designating a single process as the organizer of some task distributed among several computers (nodes).  
+Before the task is begun, all network nodes are either unaware which node will serve as the "leader" of the task, or unable to communicate with the current coordinator.  
+After a leader election algorithm has been run, however, each node throughout the network recognizes a particular, unique node as the task leader.  
+node-leader is a Nodejs implementation of the leader election algorithm backed by Redis.  
 
 ```js
 const Leader = require('node-leader');
+/**@type {RedisClient}*/
 const client = require('redis').createClient();
 
 // create new leader
-const key = 'some_key'
-const leader = new Leader(client, {key: key});
+/**@type {Leader}*/
+const leader = new Leader(client);
 console.log('id: ' + leader.id);
 console.log('lock key: ' + leader.key);
 ```
@@ -40,8 +41,6 @@ The Leader constructor takes a second optional argument called 'options':
 * `options.wait` - Time between 2 tries getting elected in ms (default value is `1000`)
 
 ```js
-const client = require('redis').createClient();
-
 const options = {
     key: 'some_key',
     ttl: 20000,
