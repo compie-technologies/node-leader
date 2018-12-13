@@ -29,9 +29,8 @@ const Leader = require('node-leader');
 const client = require('redis').createClient();
 
 // create new leader
-const key = 'some_key'
 /**@type {Leader}*/
-const leader = new Leader(client, {key: key});
+const leader = new Leader(client);
 console.log('id: ' + leader.id);
 console.log('lock key: ' + leader.key);
 ```
