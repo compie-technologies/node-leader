@@ -1,0 +1,29 @@
+{
+  "name": "node-leader",
+  "version": "0.0.1",
+  "author": "Amit Landau. <amit@compie.co.il> ",
+  "contributors": [],
+  "description": "Leader Election Using Redis in Node.js.",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/compie-technologies/node-leader.git"
+  },
+  "main": "index",
+  "keywords": [
+    "leader-election",
+    "node-leader",
+    "redis",
+    "nodejs"
+  ],
+  "dependencies": {
+    "events": "^3.0.0",
+    "redis": "^2.8.0",
+    "util": "^0.11.1",
+    "uuid": "^3.3.2"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  }
+}
